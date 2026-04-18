@@ -1,6 +1,5 @@
 package vista;
 
-import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JButton;
@@ -12,17 +11,23 @@ import javax.swing.JTextField;
  * @author Edison Zambrano - © Programador Fantama
  */
 public class FrmLogin extends javax.swing.JFrame {
-    
+
     private String rol;
-   
 
     public FrmLogin() {
         initComponents();
         this.setResizable(false);
+        this.setExtendedState(this.MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
         this.setTitle("Login - SISTEMA DE VENTAS");
-        this.setSize(new Dimension(700, 500));
-       
+        //this.setSize(new Dimension(700, 500));
+        this.txt_usuario.setOpaque(false);
+        this.txt_usuario.setBackground(new java.awt.Color(0, 0, 0, 0)); // Fondo con alfa 0
+        //this.txt_usuario.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, java.awt.Color.WHITE));
+        
+         this.txt_password.setOpaque(false);
+        this.txt_password.setBackground(new java.awt.Color(0, 0, 0, 0)); // Fondo con alfa 0
+        //this.txt_password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, java.awt.Color.WHITE));
     }
 
     @Override
@@ -30,8 +35,6 @@ public class FrmLogin extends javax.swing.JFrame {
         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("img/supermarket.png"));
         return retValue;
     }
-    
- 
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,14 +47,17 @@ public class FrmLogin extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         fondoPanel1 = new util.FondoPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         fondoPanel2 = new util.FondoPanel();
         jLabel2 = new javax.swing.JLabel();
-        txt_usuario = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
         txt_password = new javax.swing.JPasswordField();
+        txt_usuario = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         jButton_IniciarSesion = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImage(getIconImage());
@@ -62,61 +68,53 @@ public class FrmLogin extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(350, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fondoPanel1.setRutaImagen("/img/fondo_login.jpg");
+        fondoPanel1.setRutaImagen("/img/info.jpg");
         fondoPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("icono");
-        fondoPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 50, 40));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Sistema de Ventas");
-        fondoPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 340, -1));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Información de la empresa");
-        fondoPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 340, 40));
-
-        jPanel1.add(fondoPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 500));
+        jPanel1.add(fondoPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 510, 410));
 
         fondoPanel2.setBackground(new java.awt.Color(252, 252, 252));
+        fondoPanel2.setRutaImagen("/img/login.jpg");
         fondoPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 70)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Iniciar sesión");
-        fondoPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 240, -1));
+        jLabel2.setText("Bienvenido");
+        fondoPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 410, -1));
 
-        txt_usuario.setBackground(new java.awt.Color(252, 252, 252));
-        txt_usuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_usuario.setToolTipText("");
-        txt_usuario.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(0, 0, 102), new java.awt.Color(0, 0, 102)), "Usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Segoe UI", 1, 12), new java.awt.Color(102, 102, 102))); // NOI18N
-        txt_usuario.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txt_usuarioKeyPressed(evt);
-            }
-        });
-        fondoPanel2.add(txt_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 220, 50));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 153), new java.awt.Color(0, 0, 153), new java.awt.Color(51, 0, 153), new java.awt.Color(51, 0, 153)));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txt_password.setBackground(new java.awt.Color(252, 252, 252));
         txt_password.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_password.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(0, 0, 102), new java.awt.Color(0, 0, 102)), "Contraseña", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Segoe UI", 1, 12), new java.awt.Color(102, 102, 102))); // NOI18N
+        txt_password.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153), new java.awt.Color(51, 0, 153), new java.awt.Color(0, 0, 153)), "Contraseña", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
+        txt_password.setCaretColor(new java.awt.Color(255, 255, 255));
         txt_password.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt_passwordKeyPressed(evt);
             }
         });
-        fondoPanel2.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 220, 40));
+        jPanel2.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 330, 50));
+
+        txt_usuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txt_usuario.setToolTipText("");
+        txt_usuario.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153), new java.awt.Color(51, 0, 153), new java.awt.Color(0, 0, 153)), "Usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
+        txt_usuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_usuarioKeyPressed(evt);
+            }
+        });
+        jPanel2.add(txt_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 330, 50));
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 60)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 51));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Iniciar sesión");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 450, -1));
 
         jButton_IniciarSesion.setBackground(new java.awt.Color(0, 0, 102));
-        jButton_IniciarSesion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton_IniciarSesion.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton_IniciarSesion.setForeground(new java.awt.Color(255, 255, 255));
         jButton_IniciarSesion.setText("Iniciar Sesión");
         jButton_IniciarSesion.addActionListener(new java.awt.event.ActionListener() {
@@ -124,25 +122,52 @@ public class FrmLogin extends javax.swing.JFrame {
                 jButton_IniciarSesionActionPerformed(evt);
             }
         });
-        fondoPanel2.add(jButton_IniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 274, 36));
+        jPanel2.add(jButton_IniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 360, 60));
 
-        jPanel1.add(fondoPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 340, 500));
+        fondoPanel2.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 520, 400));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 500));
+        jPanel1.add(fondoPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 860, 770));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Sistema de Ventas");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 340, -1));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("estudiantesUPTB@gmail.com");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 300, 40));
+
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setForeground(new java.awt.Color(0, 0, 153));
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("                    Fruteria tatata\n                    Ubicacion tal\n                    Abierto de tal\n                    Buen día de trabajo!!");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 360, 150));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 768));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_IniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_IniciarSesionActionPerformed
-   
+
     }//GEN-LAST:event_jButton_IniciarSesionActionPerformed
 
     private void txt_usuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_usuarioKeyPressed
-     
+
     }//GEN-LAST:event_txt_usuarioKeyPressed
 
     private void txt_passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_passwordKeyPressed
-        
+
     }//GEN-LAST:event_txt_passwordKeyPressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -152,8 +177,11 @@ public class FrmLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     public javax.swing.JPasswordField txt_password;
     public javax.swing.JTextField txt_usuario;
     // End of variables declaration//GEN-END:variables
@@ -182,6 +210,4 @@ public class FrmLogin extends javax.swing.JFrame {
         this.txt_usuario = txt_usuario;
     }
 
-  
-    
 }

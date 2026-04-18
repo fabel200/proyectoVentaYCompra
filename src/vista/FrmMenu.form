@@ -5,15 +5,10 @@
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="99" type="rgb"/>
+          <Color blue="ff" green="33" red="33" type="rgb"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-            <BevelBorder>
-              <Color PropertyName="shadowOuter" blue="66" green="0" red="0" type="rgb"/>
-              <Color PropertyName="shadowInner" blue="66" green="0" red="33" type="rgb"/>
-            </BevelBorder>
-          </Border>
+          <Border info="null"/>
         </Property>
       </Properties>
       <SubComponents>
@@ -488,7 +483,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Sistema Compra y Venta"/>
+    <Property name="title" type="java.lang.String" value="OptiBodega"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
@@ -515,10 +510,10 @@
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
             <BevelBorder>
-              <Color PropertyName="highlightOuter" blue="99" green="0" red="0" type="rgb"/>
-              <Color PropertyName="highlightInner" blue="cc" green="0" red="33" type="rgb"/>
-              <Color PropertyName="shadowOuter" blue="cc" green="0" red="0" type="rgb"/>
-              <Color PropertyName="shadowInner" blue="99" green="33" red="0" type="rgb"/>
+              <Color PropertyName="highlightOuter" blue="ff" green="ff" red="ff" type="rgb"/>
+              <Color PropertyName="highlightInner" blue="ff" green="ff" red="ff" type="rgb"/>
+              <Color PropertyName="shadowOuter" blue="ff" green="ff" red="ff" type="rgb"/>
+              <Color PropertyName="shadowInner" blue="ff" green="ff" red="ff" type="rgb"/>
             </BevelBorder>
           </Border>
         </Property>

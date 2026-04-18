@@ -1,5 +1,6 @@
 package vista;
 
+import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JDesktopPane;
 import javax.swing.JMenu;
@@ -35,6 +36,9 @@ public class FrmMenu extends javax.swing.JFrame {
         
        jDesktopPane_menu = pane;
         setContentPane(pane);
+      Image icono =  new ImageIcon(getClass().getResource("/img/supermarket.png")).getImage();
+      
+      this.setIconImage(icono);
 
     }
 
@@ -73,14 +77,14 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenuItem_cerrar_sesion = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Sistema Compra y Venta");
+        setTitle("OptiBodega");
 
-        jDesktopPane_menu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 153), new java.awt.Color(51, 0, 204), new java.awt.Color(0, 0, 204), new java.awt.Color(0, 51, 153)));
+        jDesktopPane_menu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255)));
         jDesktopPane_menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jDesktopPane_menu, java.awt.BorderLayout.CENTER);
 
-        jMenuBar1.setBackground(new java.awt.Color(153, 255, 255));
-        jMenuBar1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(0, 0, 102), new java.awt.Color(51, 0, 102)));
+        jMenuBar1.setBackground(new java.awt.Color(51, 51, 255));
+        jMenuBar1.setBorder(null);
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/usuario.png"))); // NOI18N
         jMenu1.setText("Usuario");
