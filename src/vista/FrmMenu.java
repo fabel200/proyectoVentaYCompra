@@ -1,6 +1,5 @@
 package vista;
 
-import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JDesktopPane;
 import javax.swing.JMenu;
@@ -12,29 +11,29 @@ import javax.swing.JMenuItem;
  */
 public class FrmMenu extends javax.swing.JFrame {
 
-    public static JDesktopPane jDesktopPane_menu;
+    //public static JDesktopPane jDesktopPane_menu;
 
     public FrmMenu() {
         initComponents();
-        this.setSize(new Dimension(1200, 700));
+        //this.setSize(new Dimension(1200, 700));
         this.setExtendedState(this.MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
-        this.setTitle("Sistema de Ventas");
+        //this.setTitle("Sistema de Ventas");
 
-        this.setLayout(null);
-        jDesktopPane_menu = new JDesktopPane();
+        //this.setLayout(null);
+        //jDesktopPane_menu = new JDesktopPane();
 
-        int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
-        int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
-        this.jDesktopPane_menu.setBounds(0, 0, ancho, (alto - 110));
-        this.add(jDesktopPane_menu);
+       // int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+       // int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+       // this.jDesktopPane_menu.setBounds(0, 0, ancho, (alto - 110));
+       // this.add(jDesktopPane_menu);
 
      //   ConfigurarPermisos();
      
         ImageIcon icon  = new ImageIcon(getClass().getResource("/img/fondo_principal.jpg"));
         JDesktopPane pane = new WallpaperDesktopPane(icon.getImage());
         
-        jDesktopPane_menu = pane;
+       jDesktopPane_menu = pane;
         setContentPane(pane);
 
     }
@@ -43,6 +42,7 @@ public class FrmMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDesktopPane_menu = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem_gestionar_usuario = new javax.swing.JMenuItem();
@@ -73,14 +73,18 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenuItem_cerrar_sesion = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setTitle("Sistema Compra y Venta");
 
-        jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
-        jMenuBar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(0, 0, 153), new java.awt.Color(0, 0, 153)));
+        jDesktopPane_menu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 153), new java.awt.Color(51, 0, 204), new java.awt.Color(0, 0, 204), new java.awt.Color(0, 51, 153)));
+        jDesktopPane_menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jDesktopPane_menu, java.awt.BorderLayout.CENTER);
+
+        jMenuBar1.setBackground(new java.awt.Color(153, 255, 255));
+        jMenuBar1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(0, 0, 102), new java.awt.Color(51, 0, 102)));
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/usuario.png"))); // NOI18N
         jMenu1.setText("Usuario");
-        jMenu1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jMenu1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenu1.setPreferredSize(new java.awt.Dimension(150, 50));
 
         jMenuItem_gestionar_usuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -97,7 +101,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/proveedor.png"))); // NOI18N
         jMenu4.setText("Proveedor");
-        jMenu4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jMenu4.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenu4.setPreferredSize(new java.awt.Dimension(150, 50));
 
         jMenuItem_GestionarProveedor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -131,7 +135,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/producto.png"))); // NOI18N
         jMenu2.setText("Producto");
-        jMenu2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jMenu2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenu2.setPreferredSize(new java.awt.Dimension(150, 50));
 
         jMenuItem_gestionar_producto.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -178,7 +182,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/clientes.png"))); // NOI18N
         jMenu3.setText("Cliente");
-        jMenu3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jMenu3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenu3.setPreferredSize(new java.awt.Dimension(150, 50));
 
         jMenuItem_gestionar_cliente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -204,7 +208,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/venta.png"))); // NOI18N
         jMenu5.setText("Ventas");
-        jMenu5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jMenu5.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenu5.setPreferredSize(new java.awt.Dimension(150, 50));
 
         jMenuItem_nueva_venta.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -241,7 +245,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cuentas.png"))); // NOI18N
         jMenu6.setText("Cuentas");
-        jMenu6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jMenu6.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenu6.setPreferredSize(new java.awt.Dimension(150, 50));
 
         jMenuItem_Cuentas_pagar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -288,7 +292,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/historial.png"))); // NOI18N
         jMenu7.setText("Historial");
-        jMenu7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jMenu7.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenu7.setPreferredSize(new java.awt.Dimension(150, 50));
 
         jMenuItem_ver_historial.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -305,8 +309,8 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenuBar1.add(jMenu7);
 
         jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logout.png"))); // NOI18N
-        jMenu8.setText("Cerrar Sesión");
-        jMenu8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jMenu8.setText("Salir");
+        jMenu8.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenu8.setPreferredSize(new java.awt.Dimension(200, 50));
 
         jMenuItem_cerrar_sesion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -404,6 +408,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JDesktopPane jDesktopPane_menu;
     public javax.swing.JMenu jMenu1;
     public javax.swing.JMenu jMenu2;
     public javax.swing.JMenu jMenu3;

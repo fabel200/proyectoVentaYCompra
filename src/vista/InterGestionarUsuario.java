@@ -63,6 +63,7 @@ public class InterGestionarUsuario extends javax.swing.JInternalFrame {
         jLabel7 = new javax.swing.JLabel();
         jComboBox_Roles = new javax.swing.JComboBox<>();
 
+        setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(0, 0, 102), new java.awt.Color(0, 0, 153)));
         setClosable(true);
         setIconifiable(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
