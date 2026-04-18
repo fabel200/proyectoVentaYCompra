@@ -21,6 +21,8 @@ public class Principal {
        
        
        con.iniciar();
+        System.out.println("hola");
+        
     }
     
 }
